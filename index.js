@@ -5,6 +5,29 @@
     totalSalario = document.querySelector('#total').innerHTML += total
     return totalSalario
 }*/
+
+let label = document.getElementsByTagName('label')[0];
+let input = document.getElementsByTagName('input')[0];
+
+label.onclick = function () {
+    label.style.display = 'none';
+    input.focus();
+};
+input.onblur = function () {
+    if(!this.value) label.style.display = 'block';
+};
+
+let label2 = document.getElementsByTagName('label')[1];
+let input2 = document.getElementsByTagName('input')[1];
+
+label2.onclick = function () {
+    label2.style.display = 'none';
+    input2.focus();
+};
+input2.onblur = function () {
+    if(!this.value) label2.style.display = 'block';
+};
+
 const horasDiarias = 8;
 function multiplicarSalario(){
     let diasTrabalhados = document.getElementById("dias").value;
